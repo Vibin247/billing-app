@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "billingapp",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\Vibin\\Documents\\BillingApp\\billing-app\\amplify\\backend\\api\\billingapp\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
