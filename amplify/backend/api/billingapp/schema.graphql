@@ -6,11 +6,9 @@ type Vendors @model {
   id: ID!
   name: String!
   phone: String
-  products: [Products] @hasMany
 }
 
 type Products @model {
   id: ID!
   productModel: String!
-  vendor: Vendors @belongsTo
 }

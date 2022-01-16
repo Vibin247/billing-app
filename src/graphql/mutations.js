@@ -10,16 +10,6 @@ export const createVendors = /* GraphQL */ `
       id
       name
       phone
-      products {
-        items {
-          id
-          productModel
-          createdAt
-          updatedAt
-          vendorsProductsId
-        }
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -34,16 +24,6 @@ export const updateVendors = /* GraphQL */ `
       id
       name
       phone
-      products {
-        items {
-          id
-          productModel
-          createdAt
-          updatedAt
-          vendorsProductsId
-        }
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -58,16 +38,6 @@ export const deleteVendors = /* GraphQL */ `
       id
       name
       phone
-      products {
-        items {
-          id
-          productModel
-          createdAt
-          updatedAt
-          vendorsProductsId
-        }
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -81,19 +51,8 @@ export const createProducts = /* GraphQL */ `
     createProducts(input: $input, condition: $condition) {
       id
       productModel
-      vendor {
-        id
-        name
-        phone
-        products {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       createdAt
       updatedAt
-      vendorsProductsId
     }
   }
 `;
@@ -105,19 +64,8 @@ export const updateProducts = /* GraphQL */ `
     updateProducts(input: $input, condition: $condition) {
       id
       productModel
-      vendor {
-        id
-        name
-        phone
-        products {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       createdAt
       updatedAt
-      vendorsProductsId
     }
   }
 `;
@@ -129,19 +77,8 @@ export const deleteProducts = /* GraphQL */ `
     deleteProducts(input: $input, condition: $condition) {
       id
       productModel
-      vendor {
-        id
-        name
-        phone
-        products {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       createdAt
       updatedAt
-      vendorsProductsId
     }
   }
 `;

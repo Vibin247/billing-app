@@ -20,15 +20,19 @@ export default function ListVendors(props) {
     return (
         <div>
             <h3> List of Vendors </h3>
-            <Button onClick={() => props.addVendor()}> Add Vendor </Button>
-            <Flex>
-                <DataGrid
-                    rows={props.vendors} 
-                    columns={columns}
-                    pageSize={5}
-                    rowsPerPageOptions={[5]}
-                    autoHeight={true}
-                />
+            <Flex direction={"column"} gap={"15px"}>
+                <Flex justifyContent={"end"}>
+                    <Button onClick={() => props.addVendor()}> Add Vendor </Button>
+                </Flex>
+                <Flex>
+                    <DataGrid
+                        rows={props.vendors} 
+                        columns={columns}
+                        pageSize={5}
+                        rowsPerPageOptions={[5]}
+                        autoHeight={true}
+                    />
+                </Flex>
             </Flex>
         </div>
     )

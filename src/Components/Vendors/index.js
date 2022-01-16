@@ -1,6 +1,6 @@
 import React, { Component }  from "react";
-// import { listVendors } from "../../graphql/queries";
-// import { API, graphqlOperation } from "aws-amplify";
+import { listVendors } from "../../graphql/queries";
+import { API, graphqlOperation } from "aws-amplify";
 import AddVendors from "./AddVendors";
 import ListVendors from "./ListVendors";
 
@@ -32,7 +32,7 @@ class Vendors extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{padding:"20px"}}>
                 {
                     this.state.add ?
                     <AddVendors cancelAdd={() => this.setState({ add : false})}/> : 

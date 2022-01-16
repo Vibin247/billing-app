@@ -7,16 +7,6 @@ export const onCreateVendors = /* GraphQL */ `
       id
       name
       phone
-      products {
-        items {
-          id
-          productModel
-          createdAt
-          updatedAt
-          vendorsProductsId
-        }
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -28,16 +18,6 @@ export const onUpdateVendors = /* GraphQL */ `
       id
       name
       phone
-      products {
-        items {
-          id
-          productModel
-          createdAt
-          updatedAt
-          vendorsProductsId
-        }
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -49,16 +29,6 @@ export const onDeleteVendors = /* GraphQL */ `
       id
       name
       phone
-      products {
-        items {
-          id
-          productModel
-          createdAt
-          updatedAt
-          vendorsProductsId
-        }
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -69,19 +39,8 @@ export const onCreateProducts = /* GraphQL */ `
     onCreateProducts {
       id
       productModel
-      vendor {
-        id
-        name
-        phone
-        products {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       createdAt
       updatedAt
-      vendorsProductsId
     }
   }
 `;
@@ -90,19 +49,8 @@ export const onUpdateProducts = /* GraphQL */ `
     onUpdateProducts {
       id
       productModel
-      vendor {
-        id
-        name
-        phone
-        products {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       createdAt
       updatedAt
-      vendorsProductsId
     }
   }
 `;
@@ -111,19 +59,8 @@ export const onDeleteProducts = /* GraphQL */ `
     onDeleteProducts {
       id
       productModel
-      vendor {
-        id
-        name
-        phone
-        products {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       createdAt
       updatedAt
-      vendorsProductsId
     }
   }
 `;

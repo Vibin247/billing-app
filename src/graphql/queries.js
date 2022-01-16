@@ -7,16 +7,6 @@ export const getVendors = /* GraphQL */ `
       id
       name
       phone
-      products {
-        items {
-          id
-          productModel
-          createdAt
-          updatedAt
-          vendorsProductsId
-        }
-        nextToken
-      }
       createdAt
       updatedAt
     }
@@ -33,9 +23,6 @@ export const listVendors = /* GraphQL */ `
         id
         name
         phone
-        products {
-          nextToken
-        }
         createdAt
         updatedAt
       }
@@ -48,19 +35,8 @@ export const getProducts = /* GraphQL */ `
     getProducts(id: $id) {
       id
       productModel
-      vendor {
-        id
-        name
-        phone
-        products {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       createdAt
       updatedAt
-      vendorsProductsId
     }
   }
 `;
@@ -74,16 +50,8 @@ export const listProducts = /* GraphQL */ `
       items {
         id
         productModel
-        vendor {
-          id
-          name
-          phone
-          createdAt
-          updatedAt
-        }
         createdAt
         updatedAt
-        vendorsProductsId
       }
       nextToken
     }
