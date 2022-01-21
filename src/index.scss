@@ -36,3 +36,23 @@ body {
   text-align: center;
   font-size: 60px;
 }
+.A4 {
+  width: 208mm;
+  height: 295mm;
+  box-sizing: border-box;
+  padding: 15px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .shop-name{
+    font-family: title;
+  }
+}
+.amplify-table{
+  .amplify-table__td {
+    text-align: center;
+    border-color: #000 !important;
+    padding: 5px !important;
+  }
+}
