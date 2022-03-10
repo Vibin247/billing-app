@@ -1,9 +1,9 @@
 import React, { useState }  from "react";
 import { Alert, Button, Flex, TextField } from "@aws-amplify/ui-react";
-import ItemDetails from "./ItemDetails";
-import Invoice from "./Invoice";
+import ItemDetails from "../ItemDetails";
+import Invoice from "../Invoice";
 
-export default function BillForm(props) {
+export default function SalesForm(props) {
 
     const [name, SetName] = useState("");
     const [address, SetAddress] = useState("");
@@ -28,7 +28,7 @@ export default function BillForm(props) {
 
     const checkEmpty = (data,fieldName) => {
         if (data.trim() === "") {
-            errorMessage.trim() == "" ?
+            errorMessage.trim() === "" ?
             errorMessage += fieldName :
             errorMessage += " " + fieldName;
             return true;
@@ -50,7 +50,6 @@ export default function BillForm(props) {
             checkEmpty(items[0].quantity, "Item Details") ||
             checkEmpty(items[0].rate, "Item Details")
         ) {
-            console.log(showError, errorMessage);
             SetDisplayError(errorMessage)
             SetShowError(true);
         }

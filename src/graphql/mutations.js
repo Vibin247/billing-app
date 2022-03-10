@@ -12,6 +12,9 @@ export const createVendors = /* GraphQL */ `
       phone
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -26,6 +29,9 @@ export const updateVendors = /* GraphQL */ `
       phone
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -40,45 +46,9 @@ export const deleteVendors = /* GraphQL */ `
       phone
       createdAt
       updatedAt
-    }
-  }
-`;
-export const createProducts = /* GraphQL */ `
-  mutation CreateProducts(
-    $input: CreateProductsInput!
-    $condition: ModelProductsConditionInput
-  ) {
-    createProducts(input: $input, condition: $condition) {
-      id
-      productModel
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const updateProducts = /* GraphQL */ `
-  mutation UpdateProducts(
-    $input: UpdateProductsInput!
-    $condition: ModelProductsConditionInput
-  ) {
-    updateProducts(input: $input, condition: $condition) {
-      id
-      productModel
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const deleteProducts = /* GraphQL */ `
-  mutation DeleteProducts(
-    $input: DeleteProductsInput!
-    $condition: ModelProductsConditionInput
-  ) {
-    deleteProducts(input: $input, condition: $condition) {
-      id
-      productModel
-      createdAt
-      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;

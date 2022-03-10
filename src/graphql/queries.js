@@ -9,6 +9,9 @@ export const getVendors = /* GraphQL */ `
       phone
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -25,35 +28,40 @@ export const listVendors = /* GraphQL */ `
         phone
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
     }
   }
 `;
-export const getProducts = /* GraphQL */ `
-  query GetProducts($id: ID!) {
-    getProducts(id: $id) {
-      id
-      productModel
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const listProducts = /* GraphQL */ `
-  query ListProducts(
-    $filter: ModelProductsFilterInput
+export const syncVendors = /* GraphQL */ `
+  query SyncVendors(
+    $filter: ModelVendorsFilterInput
     $limit: Int
     $nextToken: String
+    $lastSync: AWSTimestamp
   ) {
-    listProducts(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    syncVendors(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
       items {
         id
-        productModel
+        name
+        phone
         createdAt
         updatedAt
+        _version
+        _deleted
+        _lastChangedAt
       }
       nextToken
+      startedAt
     }
   }
 `;

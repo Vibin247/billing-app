@@ -9,6 +9,9 @@ export const onCreateVendors = /* GraphQL */ `
       phone
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -20,6 +23,9 @@ export const onUpdateVendors = /* GraphQL */ `
       phone
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -31,36 +37,9 @@ export const onDeleteVendors = /* GraphQL */ `
       phone
       createdAt
       updatedAt
-    }
-  }
-`;
-export const onCreateProducts = /* GraphQL */ `
-  subscription OnCreateProducts {
-    onCreateProducts {
-      id
-      productModel
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onUpdateProducts = /* GraphQL */ `
-  subscription OnUpdateProducts {
-    onUpdateProducts {
-      id
-      productModel
-      createdAt
-      updatedAt
-    }
-  }
-`;
-export const onDeleteProducts = /* GraphQL */ `
-  subscription OnDeleteProducts {
-    onDeleteProducts {
-      id
-      productModel
-      createdAt
-      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
