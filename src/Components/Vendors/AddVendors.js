@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Button, Flex, TextField } from "@aws-amplify/ui-react";
-import { createVendors } from "../../graphql/mutations";
-import { API, graphqlOperation } from "aws-amplify";
 
 export default function AddVendors(props) {
 
@@ -15,17 +13,7 @@ export default function AddVendors(props) {
             return
         }
         else {
-            try {
-                API.graphql(graphqlOperation(createVendors, {
-                    input : { 
-                        phone,
-                        name
-                    }
-                }))
-            }
-            catch (e) {
-                console.log(e)
-            }
+            console.log(e)
         }
     }
 

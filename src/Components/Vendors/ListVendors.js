@@ -1,21 +1,11 @@
 import { Button, Flex } from "@aws-amplify/ui-react";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { DataGrid } from '@mui/x-data-grid';
-import { listVendors } from "../../graphql/queries";
-import { API, graphqlOperation } from "aws-amplify";
 
 export default function ListVendors(props) {
 
     const [vendors, SetVendors] = useState([]);
-    const [loading, SetLoading] = useState(true);
-
-    useEffect(() => {
-        API.graphql(graphqlOperation(listVendors))
-        .then(response => {
-            SetVendors(response.data.listVendors.items)
-            SetLoading(false);
-        });
-    }, []);
+    const [loading, SetLoading] = useState(false);
 
     const columns = [
         {
